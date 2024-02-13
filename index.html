@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Todo App</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <h1 class="header-h1">TO-DO</h1>
+            </header>
+            <nav class="navbar">
+                <span class="material-symbols-outlined menu">menu</span>
+            </nav>
+
+            <div class="container">
+                <section class="link-side">
+                    <div class="links-and-project-container">
+                        <div class="project-section">
+                            <h1>Projects</h1>
+                            <ul class="project-list">
+                                <li>
+                                    <a href="#">Gym</a>
+                                    <span class="number-of-item">0</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="note-section">
+                            <button class="a-notes">Notes</button>
+                        </div>
+                    </div>
+
+                    <div class="div-add-btn-div">
+                        <button class="add-btn">
+                            <span class="material-symbols-outlined">add</span>
+                        </button>
+                    </div>
+                </section>
+
+                <section class="content-side"></section>
+
+                <!-- Modal-Section -->
+
+                <section class="add-modal-container">
+                    <div class="add-modal-content">
+                        <header class="modal-header">
+                            <h1 class="modal-header-h1">Create a new</h1>
+                            <a href="#" class="modal-close-link">
+                                <span class="material-symbols-outlined"
+                                    >close</span
+                                >
+                            </a>
+                        </header>
+                        <div class="modal-body">
+                            <div class="modal-link-side">
+                                <a href="#" class="modal-todo-link">To Do</a>
+                                <a href="#" class="modal-project-link"
+                                    >Project</a
+                                >
+                                <a href="#" class="modal-note-link">Note</a>
+                            </div>
+
+                            <!-- modal content side -->
+                            <div class="modal-content-side">
+                                <!-- modal todo section -->
+                                <div class="modal-to-do-section hidden">
+                                    <!-- to-do modal section  -->
+
+                                    <div class="to-do-top-section">
+                                        <input
+                                            type="text"
+                                            class="to-do-input-1"
+                                            placeholder="Title: Pay bills"
+                                        />
+                                        <textarea
+                                            name="to-do-text"
+                                            id=""
+                                            class="to-do-text"
+                                            cols="30"
+                                            rows="10"
+                                            placeholder="Details:eg internet, phone,rent"
+                                        ></textarea>
+                                    </div>
+
+                                    <!-- to do modal bottom section -->
+                                    <div class="to-do-bottom-section">
+                                        <div class="date-section">
+                                            <p>Due Date:</p>
+                                            <input
+                                                type="date"
+                                                class="date-input"
+                                            />
+                                        </div>
+
+                                        <div class="priority-section">
+                                            <div class="priority-btn-section">
+                                                <p>Priority:</p>
+                                                <div class="priority-btn">
+                                                    <button class="low-btn">
+                                                        Low
+                                                    </button>
+                                                    <button class="medium-btn">
+                                                        Medium
+                                                    </button>
+                                                    <button class="high-btn">
+                                                        High
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!--  -->
+                                            <div
+                                                class="create-new-to-do-section"
+                                            >
+                                                <button
+                                                    class="create-new-to-do-btn"
+                                                >
+                                                    ADD TO DO
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- modal project section -->
+                                <div class="modal-project-section hidden">
+                                    <input
+                                        type="text"
+                                        class="modal-project-section-title-input"
+                                        placeholder="Title: House renovation"
+                                    />
+                                    <button class="modal-project-section-btn">
+                                        CREATE PROJECT
+                                    </button>
+                                </div>
+
+                                <!-- modal note section -->
+                                <div class="modal-note-section">
+                                    <div class="note-input-textArea">
+                                        <input
+                                            type="text"
+                                            class="note-input"
+                                            placeholder="tittle"
+                                        />
+                                        <textarea
+                                            name="details"
+                                            id=""
+                                            class="note-detail"
+                                            cols="30"
+                                            rows="10"
+                                            placeholder="Details"
+                                        ></textarea>
+                                    </div>
+                                    <button class="create-note-btn">
+                                        CREATE NOTE
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Edit Modal Section -->
+                <section class="edit-modal-section hidden">
+                    <div class="edit-modal">
+                        <!-- to-do modal section  -->
+                        <header class="edit-modal-header">
+                            <h1 class="edit-h1">Edit Task</h1>
+                            <span
+                                class="material-symbols-outlined edit-close-btn"
+                                >close</span
+                            >
+                        </header>
+
+                        <div class="edit-to-do-top-section">
+                            <input
+                                type="text"
+                                class="edit-to-do-input-1"
+                                placeholder="Title: Pay bills"
+                            />
+                            <textarea
+                                name="to-do-text"
+                                id=""
+                                class="edit-to-do-text"
+                                cols="30"
+                                rows="10"
+                                placeholder="Details:eg internet, phone,rent"
+                            ></textarea>
+                        </div>
+
+                        <!-- to do modal bottom section -->
+                        <div class="edit-to-do-bottom-section">
+                            <div class="edit-date-section">
+                                <p>Due Date:</p>
+                                <input type="date" class="edit-date-input" />
+                            </div>
+
+                            <div class="edit-priority-section">
+                                <div class="edit-priority-btn-section">
+                                    <p>Priority:</p>
+                                    <div class="edit-priority-btn">
+                                        <button class="edit-low-btn">
+                                            Low
+                                        </button>
+                                        <button class="edit-medium-btn">
+                                            Medium
+                                        </button>
+                                        <button class="edit-high-btn">
+                                            High
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- cancel -->
+                                <div class="edit-create-new-to-do-section">
+                                    <button class="edit-confirm-btn">
+                                        Confirm
+                                    </button>
+                                    <button class="edit-cancel-btn">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="detail-modal-container"></section>
+            </div>
+
+            <template class="template-task">
+                <div class="task">
+                    <div class="left-side-task">
+                        <input type="checkbox" class="checkbox" />
+                        <p class="pElement"></p>
+                    </div>
+                    <div class="right-side-task">
+                        <p class="date-input"></p>
+                        <button class="task-edit-btn">Edit</button>
+                        <button class="task-delete-btn">Delete</button>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
